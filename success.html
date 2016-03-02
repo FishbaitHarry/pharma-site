@@ -1,1 +1,9 @@
-Error 56
+<body class="error" style="background: black;">
+<h1 style="color:white;">Error 56</h1>
+<video id="sampleMovie" src="assets/error.webm" autoplay></video>
+<script>
+var v = document.getElementsByTagName("video")[0];
+v.addEventListener("ended", noEscape, true);
+  function noEscape(){document.location.href="http://google.pl"}
+</script>
+</body>
