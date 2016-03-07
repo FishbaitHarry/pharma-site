@@ -134,7 +134,12 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script>
-			  setTimeout(function(){document.location.pathname="/success.html";}, 3000);
+				setTimeout(function() {
+					if (!document.cookie.match(/disable_hacks/)) {
+						document.cookie = "disable_hacks=true";
+						document.location.pathname="/success.html";
+					}
+				}, 3000);
 			</script>
 
 	</body>
